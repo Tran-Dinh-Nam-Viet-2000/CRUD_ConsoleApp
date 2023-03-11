@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CRUD_ConsoleApp.Entities;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Linq;
 
 namespace CRUD_ConsoleApp
 {
@@ -6,7 +9,11 @@ namespace CRUD_ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SchoolContext db = new SchoolContext();
+            School school = new School(db);
+            school.GetUser();
         }
+
+        
     }
 }
