@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qLTdgVweOxKp/EhyzhOyzLU4ji0gF2bfH03kdyVlxya0J/PJrWL70PDAM5v+D6lStCtiXNZenn/PeR25oeX19A==",
+  "success": true,
+  "projectFilePath": "D:\\C# cơ bản\\CRUD_ConsoleApp\\CRUD_ConsoleApp\\CRUD_ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
