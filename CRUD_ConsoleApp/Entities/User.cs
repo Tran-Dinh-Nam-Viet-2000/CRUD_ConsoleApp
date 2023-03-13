@@ -11,5 +11,11 @@ namespace CRUD_ConsoleApp.Entities
         public string Name { get; set; }
         public int? Age { get; set; }
         public int? Phone { get; set; }
+
+        public override string ToString()
+        {
+            return "User: [" + Id + ", " + Name + ", " + Age + ", " + Phone + "]";
+        }
     }
+
 }
