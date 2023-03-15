@@ -16,7 +16,7 @@ namespace CRUD_ConsoleApp
             Console.WriteLine("4. Update Customer");
             Console.WriteLine("5. Remove Customer");
             Console.WriteLine("6. Exit");
-            Console.WriteLine("Your choice: ");
+            Console.Write("Your choice: ");
             SchoolContext dbContext = new SchoolContext();
             SchoolService schoolService = new SchoolService(dbContext);
             while (true)
@@ -35,9 +35,18 @@ namespace CRUD_ConsoleApp
                         string keyword = Console.ReadLine();
                         schoolService.SearchUser(keyword);
                         break;
-
+                    case 4:
+                        Console.Write("--Enter user by id: ");
+                        int id = Convert.ToInt32(Console.ReadLine());
+                        schoolService.UpdateUser(id);
+                        break;
+                    case 5:
+                        Console.Write("--Enter user by id: ");
+                        int userId = Convert.ToInt32(Console.ReadLine());
+                        schoolService.DeleteUser(userId);
+                        break;
                 }
-                if (number > 6)
+                if (number >= 6)
                 {
                     Console.WriteLine("Exit program !!");
                     break;

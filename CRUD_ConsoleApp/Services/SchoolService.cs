@@ -48,5 +48,41 @@ namespace CRUD_ConsoleApp
                 Console.WriteLine(item.ToString());
             }
         }
+        public void UpdateUser(int id)
+        {
+            var queryUser = _db.Users.FirstOrDefault(n => n.Id == id);
+            if(queryUser == null)
+            {
+                Console.WriteLine("Not found user !!");
+            }
+            else
+            {
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                queryUser.Name = name;
+                Console.Write("Age: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+                queryUser.Age = age;
+                Console.Write("Phone: ");
+                int phone = Convert.ToInt32(Console.ReadLine());
+                queryUser.Phone = phone;
+                _db.SaveChanges();
+                Console.WriteLine("Update successfully !!");
+            }
+        }
+        public void DeleteUser(int id)
+        {
+            var queryUser = _db.Users.FirstOrDefault(n => n.Id == id);
+            if (queryUser == null)
+            {
+                Console.WriteLine("Not found user !!");
+            }
+            else
+            {
+                _db.Remove(queryUser);
+                _db.SaveChanges();
+                Console.WriteLine("Deleted successfully !!");
+            }
+        }
     }
 }
