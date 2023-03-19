@@ -16,7 +16,7 @@ namespace CRUD_ConsoleApp
             Console.WriteLine("4. Update Customer");
             Console.WriteLine("5. Remove Customer");
             Console.WriteLine("6. Exit");
-            Console.Write("Your choice: ");
+            Console.Write("Choose your number: ");
             SchoolContext dbContext = new SchoolContext();
             SchoolService schoolService = new SchoolService(dbContext);
             while (true)

@@ -16,7 +16,9 @@ namespace CRUD_ConsoleApp
         }
         public void GetUser()
         {
-            var user = _db.Users.ToList();
+            //var user = _db.Users.ToList();
+            //var user = _db.Users.OrderBy(n => n.Age).ToList();
+            var user = _db.Users.OrderByDescending(n => n.Age).ToList();
             foreach (var item in user)
             {
                 Console.WriteLine(item.ToString());
@@ -33,6 +35,7 @@ namespace CRUD_ConsoleApp
             };
             _db.Add(user);
             _db.SaveChanges();
+            Console.WriteLine("Created successfully !!");
             return user;
         }
         public void SearchUser(string keyword)
